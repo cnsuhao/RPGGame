@@ -1,0 +1,4 @@
+using darwin : : c++ : ; # <compileflags>"-I/usr/local/include -D_THREAD_SAFE -L/usr/include/lib -lSDL2main -lSDL2" ;
+project RPG ;
+lib SDL2 : : <name>SDL2 <search>/usr/local/lib : : <include>/usr/local/include ;
+exe "RPGGame" : [ glob src/*.cpp ] : <library>/RPG//SDL2 ;
