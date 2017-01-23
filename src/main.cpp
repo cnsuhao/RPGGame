@@ -18,7 +18,7 @@ int main(int argc, char* argv[]) {
   if (screen == NULL)
     return 1;
   // GPU load image
-  GPU_Image* image = GPU_LoadImage("./../Content/test_image.png");
+  GPU_Image* image = GPU_LoadImage("Content/test_image.png");
   if (image == NULL)
     return 2;
   // Standard SDL
@@ -27,12 +27,12 @@ int main(int argc, char* argv[]) {
   if (GPU_GetDebugLevel() == GPU_DEBUG_LEVEL_MAX)
     std::cout << "Compiling vertex shader:" << "\n";
   unsigned int vertShader = GPU_LoadShader(GPU_VERTEX_SHADER,
-                                           "./../Content/Shaders/Menu.vert");
+                                           "Content/Shaders/Menu.vert");
   std::cout << GPU_GetShaderMessage() << "\n";
   if (GPU_GetDebugLevel() == GPU_DEBUG_LEVEL_MAX)
     std::cout << "Compiling fragment shader:" << "\n";
   unsigned int fragShader = GPU_LoadShader(GPU_FRAGMENT_SHADER,
-                                           "./../Content/Shaders/Menu.frag");
+                                           "Content/Shaders/Menu.frag");
   std::cout << GPU_GetShaderMessage() << "\n";
   unsigned int shaderprogram = GPU_CreateShaderProgram();
 

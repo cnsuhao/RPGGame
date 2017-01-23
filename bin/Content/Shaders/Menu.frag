@@ -24,5 +24,5 @@ vec4 blur(vec2 blurVec, int nSamples) {
 
 void main(void)
 {
-  gl_FragColor = blur(vec2(camvec[0], camvec[1])/3.0f, 100); // texture2D(tex, texcoords.xy);
+  gl_FragColor = blur(vec2(camvec[0], camvec[1])*3.0f, 15000); // texture2D(tex, texcoords.xy);
 }

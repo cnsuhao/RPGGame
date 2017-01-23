@@ -6,6 +6,8 @@ project RPGGame ;
 lib SDL2 : : <name>SDL2 <target-os>darwin:<search>/usr/local/lib <target-os>windows:<file>"C:/Dependencies/x64/lib/SDL2.lib" <target-os>windows:<file>"C:/Dependencies/x64/lib/SDL2main.lib" : : <target-os>darwin:<include>/usr/local/include <target-os>windows:<include>"C:/Dependencies/x64/include" ;
 lib SDL2_gpu : : <name>SDL2_gpu <target-os>darwin:<search>/usr/local/lib <target-os>windows:<search>"C:/Dependencies/x64/lib" : : ;
 exe "RPGGame" : [ glob src/*.cpp ] : <library>/RPGGame//SDL2 <library>/RPGGame//SDL2_gpu <target-os>darwin:<framework>"OpenGL" <address-model>64 ;
+install install-bin : RPGGame : <location>"./bin/" ; 
+
 
 
 
