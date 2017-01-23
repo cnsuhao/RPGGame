@@ -1,0 +1,4 @@
+bin/
+src/.deps/
+src/Makefile*
+src/derp
