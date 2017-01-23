@@ -12,7 +12,7 @@ int main(int argc, char* argv[]) {
     std::cout << argv[i] << "\n";
   }
 
-  // GPU init (screen)
+  // Gpu init (screen)
   GPU_SetDebugLevel(GPU_DEBUG_LEVEL_MAX);
   GPU_Target* screen = GPU_Init(1280, 720, GPU_DEFAULT_INIT_FLAGS);
   if (screen == NULL)

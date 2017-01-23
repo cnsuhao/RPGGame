@@ -1,12 +1,12 @@
-#version 120
+#version 400
 
-attribute vec3 gpu_Vertex;
-attribute vec4 gpu_Color;
-attribute vec4 gpu_TexCoords;
+in vec3 gpu_Vertex;
+in vec4 gpu_Color;
+in vec4 gpu_TexCoords;
 uniform mat4 gpu_ModelViewProjectionMatrix;
 
-varying vec4 color;
-varying vec4 texcoords;
+out vec4 color;
+out vec4 texcoords;
 
 void main(void)
 {
