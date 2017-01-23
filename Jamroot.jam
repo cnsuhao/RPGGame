@@ -1,6 +1,6 @@
 
-# using darwin : : c++ :  ; # <compileflags>"-I/usr/local/include -D_THREAD_SAFE -L/usr/include/lib -lSDL2main -lSDL2" ;
-using msvc : : ;
+using darwin : : c++ :  ; # <compileflags>"-I/usr/local/include -D_THREAD_SAFE -L/usr/include/lib -lSDL2main -lSDL2" ;
+# using <target-os>windows:msvc <target-os>darwin:darwin : : <target-os>darwin:c++ ;
 
 project RPGGame ;
 lib SDL2 : : <name>SDL2 <target-os>darwin:<search>/usr/local/lib <target-os>windows:<file>"C:/Dependencies/x64/lib/SDL2.lib" <target-os>windows:<file>"C:/Dependencies/x64/lib/SDL2main.lib" : : <target-os>darwin:<include>/usr/local/include <target-os>windows:<include>"C:/Dependencies/x64/include" ;
