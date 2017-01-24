@@ -17,6 +17,7 @@ int main(int argc, char* argv[]) {
   GPU_Target* screen = GPU_Init(1280, 720, GPU_DEFAULT_INIT_FLAGS);
   if (screen == NULL)
     return 1;
+
   // GPU load image
   GPU_Image* image = GPU_LoadImage("Content/test_image.png");
   if (image == NULL)
@@ -112,13 +113,12 @@ int main(int argc, char* argv[]) {
     }
 
     // Update camera
-    cam.x -= camvec[0] * 40.0f;
-    cam.y -= camvec[1] * 40.0f;
+    cam.x -= camvec[0] * 20.0f;
+    cam.y -= camvec[1] * 20.0f;
     GPU_SetCamera(screen, &cam);
 
     // Update logic
     // GPU_SetCamera(screen, &cam);
-
     GPU_SetUniformf(timelocation, static_cast<float>(SDL_GetTicks())/1000.0f);
     GPU_SetUniformfv(camveclocation, 1, 2, camvec);
 
