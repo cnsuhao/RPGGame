@@ -113,8 +113,8 @@ int main(int argc, char* argv[]) {
     }
 
     // Update camera
-    cam.x -= camvec[0] * 50.0f;
-    cam.y -= camvec[1] * 50.0f;
+    cam.x -= camvec[0] * 70.0f;
+    cam.y -= camvec[1] * 70.0f;
     GPU_SetCamera(screen, &cam);
 
     // Update logic
