@@ -29,8 +29,10 @@ void main(void)
   if(camvec[0] != 0 || camvec[1] != 0) {
     outcolor = blur(vec2(camvec[0], camvec[1])/3.0f, 5);
   }else {
-    outcolor = texture(tex, texcoords.xy);
+    outcolor = texture(tex, texcoords.xy + vec2(0.05*sin(time+texcoords.y*10)), 0);
   }
+  // outcolor *= sin(time)/2.0 + 0.5;
+
 }
 
 
