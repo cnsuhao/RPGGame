@@ -1,7 +1,9 @@
 #version 400
 
-uniform float time;
-uniform float camvec[2];
+//uniform float time;
+//uniform float camvec[2];
+
+uniform float SSCAAmount;
 
 uniform sampler2D tex;
 
@@ -26,13 +28,12 @@ vec4 blur(vec2 blurVec, int nSamples) {
 
 void main(void)
 {
-  if(camvec[0] != 0 || camvec[1] != 0) {
-    outcolor = blur(vec2(camvec[0], camvec[1])/3.0f, 5);
-  }else {
-    outcolor = texture(tex, texcoords.xy + vec2(0.004*sin(10*time+texcoords.y*100)), 0);
-  }
-  // outcolor *= sin(time)/2.0 + 0.5;
-
+  vec2 center = vec2(0.5, 0.5);
+  vec2 c = vec2(pow((center - texcoords.xy).x*2, 2), pow((center - texcoords.xy).y*2, 2));
+  outcolor = vec4(texture(tex, texcoords.xy+(c/400.0)).x,
+                  texture(tex, texcoords.xy).y,
+                  texture(tex, texcoords.xy-(c/400.0)).z, 1.0);
+  // outcolor = texture(tex, texcoords.xy);
 }
 
 
