@@ -70,7 +70,7 @@ int main(int argc, char* argv[]) {
     while (SDL_PollEvent(&event)) {
       if (event.type == SDL_QUIT)
         done = 1;
-      if (event.type == SDL_KEYUP){
+      if (event.type == SDL_KEYUP) {
         if (event.key.keysym.sym == SDLK_ESCAPE) {
           done = 1;
         }
@@ -113,8 +113,8 @@ int main(int argc, char* argv[]) {
     }
 
     // Update camera
-    cam.x -= camvec[0] * 20.0f;
-    cam.y -= camvec[1] * 20.0f;
+    cam.x -= camvec[0] * 50.0f;
+    cam.y -= camvec[1] * 50.0f;
     GPU_SetCamera(screen, &cam);
 
     // Update logic
