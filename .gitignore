@@ -1,7 +1,5 @@
-bin/darwin-4.2.1/*log
-bin/darwin-4.2.1/*jam
-bin/darwin-4.2.1/debug/RPGGame
-bin/darwin-4.2.1/debug/src/
+bin/darwin-4.2.1
+bin/msvc-14.0
 src/.deps/
 src/Makefile*
 src/derp
