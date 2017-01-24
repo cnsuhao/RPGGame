@@ -40,7 +40,7 @@ int main(int argc, char* argv[]) {
     GPU_Clear(screen);
     GPU_Blit(image, NULL, screen, image->w/2, image->h/2);
     GPU_Flip(screen);
-    
+
     // Count fps
     if (lastSecond == static_cast<unsigned int>(floor(SDL_GetTicks()/1000))) {
       fps++;
