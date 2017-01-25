@@ -55,7 +55,7 @@ int main(int argc, char* argv[]) {
   GPU_Camera cam = GPU_GetCamera(screen);
   cam.x = -500;
   cam.y = -200;
-  //cam.zoom = 1.75f;
+  // cam.zoom = 1.75f;
   GPU_SetCamera(screen, &cam);
 
   // fps counter variables
