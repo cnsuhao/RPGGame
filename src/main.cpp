@@ -22,7 +22,7 @@ int main(int argc, char* argv[]) {
 
   // GPU_SetFullscreen(true, true);
   // GPU load image
-  GPU_Image* image = GPU_LoadImage("Content/test_image2.png");
+  GPU_Image* image = GPU_LoadImage("Content/test_image.png");
   if (image == NULL)
     return 2;
   GPU_SetImageFilter(image, GPU_FILTER_NEAREST);
@@ -100,7 +100,7 @@ int main(int argc, char* argv[]) {
   // GPU_Set
 
   // GPU_SetVirtualResolution(screen, 1920, 1080);
-  GPU_SetVirtualResolution(frametarget, 1280, 720);
+  GPU_SetVirtualResolution(frametarget, 1920, 1080);
   // frametarget->w = 1920;
   // frametarget->h = 1080;
 
@@ -117,7 +117,7 @@ int main(int argc, char* argv[]) {
           framebuffer = GPU_CreateImage(event.window.data1,
                                         event.window.data2, GPU_FORMAT_RGB);
           frametarget = GPU_LoadTarget(framebuffer);
-          GPU_SetVirtualResolution(frametarget, 1280, 720);
+          GPU_SetVirtualResolution(frametarget, 1920, 1080);
         }
       } else if (event.type == SDL_KEYUP) {
         if (event.key.keysym.sym == SDLK_ESCAPE) {
@@ -185,8 +185,8 @@ int main(int argc, char* argv[]) {
                   frametarget,
                   image->w/2,
                   image->h/2,
-                  10,
-                  10);
+                  1,
+                  1);
 
     // GPU_DeactivateShaderProgram();
     GPU_ActivateShaderProgram(SSCAprogram, &SSCAshaderblock);
