@@ -27,7 +27,7 @@ vec4 blur(vec2 blurVec, int nSamples) {
 void main(void)
 {
   if(camvec[0] != 0 || camvec[1] != 0) {
-    outcolor = blur(vec2(camvec[0], camvec[1])/3.0f, 5);
+    outcolor = blur(vec2(camvec[0], camvec[1])/2.0f, 5);
   }else {
     // outcolor = texture(tex, texcoords.xy + vec2(0.004*sin(10*time+texcoords.y*100)), 0);
     outcolor = texture(tex, texcoords.xy);

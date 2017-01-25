@@ -3,3 +3,10 @@ bin/msvc-14.0
 src/.deps/
 src/Makefile*
 src/derp
+*.log
+*cache.jam
+bin/RPGGame
+*.aux
+*.pdf
+*.tex
+Story/auto/
